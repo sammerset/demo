@@ -1,0 +1,13 @@
+{
+  "rufo.exe": "rufo",  // can be an absolute path
+  "rufo.useBundler": false,
+  "editor.defaultFormatter": "jnbt.vscode-rufo",
+  "C_Cpp.formatting": "default",
+  "editor.formatOnSave": true,
+  "[ruby]": {
+    "editor.defaultFormatter": "misogi.ruby-rubocop"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+}

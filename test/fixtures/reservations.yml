@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  check_in: 2024-04-21 11:44:33
+  check_out: 2024-04-21 11:44:33
+  price: 9.99
+  guest_name: MyString
+  listing_id: 1
+  status: MyString
+
+two:
+  check_in: 2024-04-21 11:44:33
+  check_out: 2024-04-21 11:44:33
+  price: 9.99
+  guest_name: MyString
+  listing_id: 1
+  status: MyString
