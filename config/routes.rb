@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :books
 
   namespace :webhooks do
     resources :reservations, only: [] do
