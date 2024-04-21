@@ -29,8 +29,8 @@ module Hostaway
           HOSTAWAY_AUTH_URL,
           {
             grant_type: 'client_credentials',
-            client_id: ENV['HOSTAWAY_AUTH_TOKEN'],
-            client_secret: ENV['HOSTAWAY_AUTH_SECRET'],
+            client_id: ENV.fetch('HOSTAWAY_AUTH_TOKEN'),
+            client_secret: ENV.fetch('HOSTAWAY_AUTH_SECRET'),
             scope: 'general'
           }
         )
