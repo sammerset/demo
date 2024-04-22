@@ -1,6 +1,7 @@
 class CreateReservations < ActiveRecord::Migration[7.1]
   def change
     create_table :reservations do |t|
+      t.integer :source_id
       t.datetime :check_in
       t.datetime :check_out
       t.decimal :price
@@ -11,6 +12,6 @@ class CreateReservations < ActiveRecord::Migration[7.1]
       t.timestamps
     end
 
-    add_index :reservations, %i[guest_name check_in check_out], unique: true
+    add_index :reservations, :source_id, unique: true
   end
 end

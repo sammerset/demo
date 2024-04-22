@@ -5,7 +5,7 @@ module Webhooks
     skip_before_action :verify_authenticity_token
 
     def handle
-      CreateOrUpdateReservationService.new.call(params: params.permit!)
+      Hostaway::Webhooks::CreateOrUpdateReservationService.call(params: params.permit!)
     end
   end
 end

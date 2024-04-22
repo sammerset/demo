@@ -14,14 +14,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_21_094433) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "books", force: :cascade do |t|
-    t.text "title"
-    t.string "author"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "reservations", force: :cascade do |t|
+    t.integer "source_id"
     t.datetime "check_in"
     t.datetime "check_out"
     t.decimal "price"
@@ -30,7 +24,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_04_21_094433) do
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["guest_name", "check_in", "check_out"], name: "index_reservations_on_guest_name_and_check_in_and_check_out", unique: true
+    t.index ["source_id"], name: "index_reservations_on_source_id", unique: true
   end
 
 end
