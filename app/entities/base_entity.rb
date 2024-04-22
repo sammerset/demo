@@ -6,4 +6,8 @@ class BaseEntity < Dry::Struct
   end
 
   transform_keys(&:to_sym)
+
+  def to_s
+    "Error #{e.title} - #{e.details}"
+  end
 end

@@ -12,7 +12,7 @@ module Periodic
       if result.success?
         Rails.logger.info 'Reservations had been successfully fetched and persisted!'
       else
-        Rails.logger.error("Fetch reservations error: #{e.title} - #{e.details}")
+        raise "Fetch reservations error: #{e}"
       end
     end
   end
